@@ -17,3 +17,6 @@
       src: https://www.free-css.com/assets/files/free-css-templates/download/page285/farmfresh.zip
       dest: /tmp/
       remote_src: yes    
+
+  - name: Move template files to /var/www/html
+    shell: "mv /tmp/organic-farm-website-template/*  /var/www/html/"
