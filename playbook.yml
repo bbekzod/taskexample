@@ -1,0 +1,19 @@
+- hosts: ubuntu2
+  tasks: 
+  - name: Install apache2
+    apt:
+      name: apache2
+      state: present
+      update_cache: yes
+
+  - name: Install unzip
+    apt:
+      name: unzip
+      state: present
+      update_cache: yes   
+
+  - name: Unarchive a file that needs to be downloaded (added in 2.0)
+    unarchive:
+      src: https://www.free-css.com/assets/files/free-css-templates/download/page285/farmfresh.zip
+      dest: /tmp/
+      remote_src: yes    
